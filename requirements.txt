@@ -1,11 +1,23 @@
-# requirements.txt
-
-# General dependencies
-pandas
-openpyxl
-requests
-PyMuPDF
-ttkbootstrap
-
-# Windows-specific dependencies
-pywin32
+altgraph==0.17.4
+certifi==2024.12.14
+charset-normalizer==3.4.1
+et_xmlfile==2.0.0
+idna==3.10
+numpy==2.2.1
+openpyxl==3.1.5
+packaging==24.2
+pandas==2.2.3
+pefile==2023.2.7
+pillow==11.1.0
+pyinstaller==6.11.1
+pyinstaller-hooks-contrib==2024.11
+PyMuPDF==1.25.1
+python-dateutil==2.9.0.post0
+pytz==2024.2
+pywin32==308
+pywin32-ctypes==0.2.3
+requests==2.32.3
+six==1.17.0
+ttkbootstrap==1.10.1
+tzdata==2024.2
+urllib3==2.3.0
