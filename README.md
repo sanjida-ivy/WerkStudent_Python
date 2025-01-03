@@ -1,79 +1,99 @@
 
-# WerkStudent_Python
+# PDF Data Extraction Tool
 
 ## Overview
 
-This repository contains the interview task for the WerkStudent position in Python. The goal is to collect data from two sample invoices, create an Excel file with two sheets, and generate a CSV file. Additionally, an executable file should be provided to run the code.
+A Python-based tool to extract data from PDF files and export it to CSV and Excel formats. It is designed for processing invoices and tabular data efficiently.
 
-## Task Details
+## Features
 
-1. **Data Extraction**:
-    - Extract specific values from three sample invoices.
-    - For Sample 1, extract the value shown in the provided image.
-    - <img width="289" alt="image" src="https://github.com/user-attachments/assets/0cf000ff-c305-4ffe-beb4-1c02a04d06b6" />
-    - For Samples 2, extract the value shown in the provided image.
-    - <img width="497" alt="image" src="https://github.com/user-attachments/assets/ea6eb368-604d-4dd4-9235-fbc8ec36d275" />
-
-2. **Excel File Creation**:
-    - Create an Excel file with two sheets:
-        - **Sheet 1**: Contains three columns - File Name, Date (scraped from the document), and Value.
-        - **Sheet 2**: Contains a pivot table with the date and value sum, and also by document name.
-
-3. **CSV File Creation**:
-    - Create a CSV file with all the data, including headers, and use a semicolon (;) as the separator.
-
-4. **Executable File**:
-    - Provide an executable file (.exe) that can run the code if the files are in the same folder.
-
-5. **Fork Creation**:
-    - Create a fork of this repository named `LastName_FirstName_WerkStudent_Python` (e.g., `Shovon_Golam_WerkStudent_Python`).
-    - Upload your code to this branch. No need to submit a pull request; the fork will be checked directly.
-
-6. **Documentation**:
-    - Include an explanation in the README file that a non-technical person can understand.
-    - Ensure the code is documented so that a technical person can understand it.
-
-7. **Problem Reporting**:
-    - If you face any problems or find it impossible to complete a task, document the issue in the README file of your branch. Explain what the problem was and why you were unable to complete it.
+- Extracts dates, monetary values, and specific fields from PDFs.
+- Converts currencies to a unified format (e.g., USD).
+- Outputs data in:
+  - CSV format (`output_csv.csv`)
+  - Excel format with a pivot table (`output_xlsx.xlsx`).
+- User-friendly GUI with:
+  - Progress bar
+  - Notifications for task completion
 
 
-## How It Works
+## Installation
 
-1. **Data Extraction**:
-    - The script reads the sample invoices and extracts the required values.
-    - The extracted data is stored in variables for further processing.
+### Prerequisites
 
-2. **Excel File Creation**:
-    - The script creates an Excel file with two sheets.
-    - Sheet 1 contains the file name, extracted data, and value.
-    - Sheet 2 contains a pivot table summarizing the data by date and document name.
+- Python 3.7 or later
+- Internet connectivity (for currency conversion)
 
-3. **CSV File Creation**:
-    - The script generates a CSV file with the extracted data, including headers, and uses a semicolon as the separator.
+### Steps
 
-4. **Executable File**:
-    - An executable file is provided to run the entire code. Ensure the sample invoices are in the same folder as the executable file.
+1. Clone the repository or download the source code:
+   ```bash
+   git clone <repository-url>
+   cd <repository-directory>
+   ```
+2. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
+3. (Optional) Create and activate a virtual environment:
+   ```bash
+   python -m venv myenv
+   source myenv/Scripts/activate  # On Windows
+   ```
 
-5. **Requirements File**:
-    -A requirements.txt file is included to create the environment needed to run the code
+## Usage
 
-## Running the Code
+### Using the Executable File
 
-1. Place the sample invoices in the same folder as the executable file.
-2. Run the executable file to execute the code and generate the Excel and CSV files.
+- Navigate to the `dist/` folder to find the executable file (`DataExtractionFromPDF.exe`).
+- To run the `.exe` file, ensure that privacy settings on your operating system allow the execution of unsigned applications.
+- No additional installation is required to execute the `.exe` file.
+- PDF files can be selected from any folder on your system through the GUI.
+
+### Using the Python Script
+
+1. Run the main script:
+   ```bash
+   python DataExtractionFromPDF.py
+   ```
+2. Use the GUI to select PDF files (e.g., `sample_invoice_1.pdf`, `sample_invoice_2.pdf`) for processing.
+3. The progress bar will indicate the status. Notifications appear upon completion.
+4. Outputs are stored in the root directory as `output_csv.csv` and `output_xlsx.xlsx`.
 
 
-## Documentation
+## Requirements
 
-- The README file contains a non-technical explanation of the code.
-- The code is documented with comments to help technical users understand its functionality.
+Dependencies listed in `requirements.txt`:
+- `pandas`
+- `openpyxl`
+- `requests`
+- `PyMuPDF`
+- `ttkbootstrap`
+- `pywin32`
 
-## Problem Reporting
+Install them using:
+```bash
+pip install -r requirements.txt
+```
 
-- If you face any problems or find it impossible to complete a task, document the issue in the README file of your branch. Explain what the problem was and why you were unable to complete it.
+## File Structure
 
-## Timeline
+- `DataExtractionFromPDF.py`: Main script for running the application.
+- `requirements.txt`: List of dependencies.
+- `dist/`: Folder containing the compiled executable (`DataExtractionFromPDF.exe`).
+- `image/`: Contains images for documentation (`UI.png`, `Pivottable.png`).
+  
+  ![User Interface](image/UI.png)
+  ![Pivot Table](image/Pivottable.png)
 
-- The time limit for this task is 9 January 2025. 
+- Example PDFs: `sample_invoice_1.pdf`, `sample_invoice_2.pdf`.
+- Output Files:
+  - `output_csv.csv`: Processed data in CSV format.
+  - `output_xlsx.xlsx`: Data in Excel format with pivot table.
+
+## Notes
+
+- Ensure internet connectivity for currency conversion functionality.
+- Developed and tested on Windows OS. Adjustments may be required for other platforms.
 
 

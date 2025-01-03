@@ -1,0 +1,17 @@
+
+# Exclude the virtual environment folder
+myenv/
+build/
+
+# Exclude compiled Python files
+*.pyc
+__pycache__/
+
+# Exclude other common directories and files
+dist/
+*.log
+*.sqlite3
+
+# Output files
+output_csv.csv
+output_xlsx.xlsx
