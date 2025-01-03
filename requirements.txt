@@ -1,0 +1,11 @@
+# requirements.txt
+
+# General dependencies
+pandas
+openpyxl
+requests
+PyMuPDF
+ttkbootstrap
+
+# Windows-specific dependencies
+pywin32
